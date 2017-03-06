@@ -1,0 +1,78 @@
+<html>
+<head>
+
+<title>Adventskalender</title>
+</head>
+<body>
+<script language="JavaScript">
+
+
+
+var tag=self.location.search; //Übergabeparameter vom Adventskalender
+tag=tag.slice(1);	//Übergabeparameter wird um das "?" erleichtert
+//alert(tag);
+//Ein Array einbauen, welches die Werte 1-24 enthält, willkürlich durch den Randomizer sortiert.
+//Cookie einbauen, der das Array abspeichert, damit die einmal sortierte Reihenfolge immer beibehalten wird.
+	
+	if(document.cookie){
+	string=holeCookie(1);
+	array=buildArray(string);
+	//alert("nach dem zusammenbau: " + array);
+	//alert("ARRAY " + array); //Testausgabe für buildArray
+	//alert("STRING " + string);
+	}
+	
+	
+	
+	var cookieWert;	
+	function holeCookie(Keksname)
+			{
+			alleCookies=document.cookie;  //Alles in eine Datei
+			cookieArr=alleCookies.split(";");	//trennen nach dem Semikolon
+			for(var i=0;i<cookieArr.length;i++)	//läuft von 0 bis zur Länge des Arrays
+				{
+				if(cookieArr[i].split("=")[0] == Keksname) //Wenn der Keksname dem Wert im Array an Position i entspricht, wird dieser 
+					{
+					cookieWert=cookieArr[i].split("="); //Nach dem "=" wird "gesplittet"
+					cookieWert=unescape(cookieWert[1]);
+					//alert("cookie: " + cookieWert);
+					return cookieWert;	//gut, bräuchte man in dem Fall nicht, hab es aber dringelassen... die Funktion ist zwar nicht von mir, kam mir aber sehr gelegen ;)
+					}
+				}
+				return false;
+	}
+	
+	
+	function buildArray(string){
+		var array = new Array(24);
+		var j=0;
+		for(i=0;i<string.length;i++){
+			if(string.charAt(i)!=","){
+				if(string.charAt(i)!= "," && string.charAt(i+1)!=","){
+				array[j]=string.charAt(i) + string.charAt(i+1);
+				i++;
+				j++;
+				}
+					
+				else{
+					array[j]=string.charAt(i);
+					j++;
+					}
+			}
+		}
+		return array;		
+		}
+		
+	
+	
+		
+	
+	var bild = "<img src=" + array[tag-1] + ".jpg>";
+	document.write("<p align='center'>" + bild);
+	
+	
+	
+</script>
+</body>
+
+</html>
