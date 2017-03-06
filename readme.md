@@ -3,3 +3,5 @@ This thing had gone viral at the university I studied that time. Many students h
 Even after several years I received emails from students that just wanted to thank me for writing and publishing this ;)
 
 This "project" is just for entertainment purposes. I today wouldn't even think about writing that messed up code. I don't even know if that "Adventskalender" works, to be honest.
+
+Demo: http://www.katzefudder.de/adventskalender/index.htm
