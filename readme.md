@@ -4,4 +4,4 @@ Even after several years I received emails from students that just wanted to tha
 
 This "project" is just for entertainment purposes. I today wouldn't even think about writing that messed up code. I don't even know if that "Adventskalender" works, to be honest.
 
-Demo: http://www.katzefudder.de/adventskalender/index.htm
+Demo: https://www.katzefudder.de/xmas/index.htm
